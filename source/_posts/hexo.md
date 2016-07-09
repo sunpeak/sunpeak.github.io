@@ -68,10 +68,6 @@ menu:
   archives: /archives
   categories: /categories
   tags: /tags
-  
-设置侧边栏显示
-sidebar：
-    display: always 
     
 设置代码高亮主题
 highlight_theme: night 
@@ -136,6 +132,10 @@ $ git commit -m "注释"
 创建分支并切换分支
 $ git branch hexo
 $ git checkout hexo 
+
+新建.gitignore文件，忽略hexo发布的静态文件，内容如下
+db.json
+public/
 
 提交hexo分支到github保存
 $ git add .
