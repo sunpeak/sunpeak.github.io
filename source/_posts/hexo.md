@@ -136,6 +136,8 @@ $ git checkout hexo
 新建.gitignore文件，忽略hexo发布的静态文件，内容如下
 db.json
 public/
+.deploy_git/
+node_modules/
 
 提交hexo分支到github保存
 $ git add .
