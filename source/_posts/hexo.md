@@ -151,6 +151,7 @@ $ cd your-hexo-site
 $ hexo clean && hexo g && hexo s
 
 发布博客
+$ npm install hexo-deployer-git --save
 $ hexo deploy
 
 浏览myname.github.io

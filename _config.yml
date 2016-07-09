@@ -69,6 +69,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/sunpeak/sunpeak.github.io.git
+  repo: git@github.com:sunpeak/sunpeak.github.io.git
   branch: master
   
