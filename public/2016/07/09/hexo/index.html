@@ -1,0 +1,643 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="github pages,hexo,hexo-theme-next,markdown," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="技术说明
+github pages，由github提供的免费空间
+Hexo，基于Node.js开发的快速、简单和强大的博客框架，支持markdown格式。官网 http://hexo.io
+hexo-theme-next，hexo配套的主题，目前在github上star最多。官网 http://theme-next.iissnan.com/
+
+安装准备
+node.js  
+git
+
+hexo安装1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo搭建git博客">
+<meta property="og:url" content="http://yoursite.com/2016/07/09/hexo/index.html">
+<meta property="og:site_name" content="湖心一叶">
+<meta property="og:description" content="技术说明
+github pages，由github提供的免费空间
+Hexo，基于Node.js开发的快速、简单和强大的博客框架，支持markdown格式。官网 http://hexo.io
+hexo-theme-next，hexo配套的主题，目前在github上star最多。官网 http://theme-next.iissnan.com/
+
+安装准备
+node.js  
+git
+
+hexo安装1">
+<meta property="og:updated_time" content="2016-07-09T10:24:56.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Hexo搭建git博客">
+<meta name="twitter:description" content="技术说明
+github pages，由github提供的免费空间
+Hexo，基于Node.js开发的快速、简单和强大的博客框架，支持markdown格式。官网 http://hexo.io
+hexo-theme-next，hexo配套的主题，目前在github上star最多。官网 http://theme-next.iissnan.com/
+
+安装准备
+node.js  
+git
+
+hexo安装1">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/09/hexo/"/>
+
+  <title> 使用Hexo搭建git博客 | 湖心一叶 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">湖心一叶</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用Hexo搭建git博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-09T13:39:05+08:00" content="2016-07-09">
+              2016-07-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h2><ul>
+<li>github pages，由github提供的免费空间</li>
+<li>Hexo，基于Node.js开发的快速、简单和强大的博客框架，支持markdown格式。官网 <a href="http://hexo.io" target="_blank" rel="external">http://hexo.io</a></li>
+<li>hexo-theme-next，hexo配套的主题，目前在github上star最多。官网 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a></li>
+</ul>
+<h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><ul>
+<li>node.js  </li>
+<li>git</li>
+</ul>
+<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">全局安装hexo框架</div><div class="line">$ npm install -g hexo</div><div class="line"></div><div class="line">初始化hexo工作空间</div><div class="line">$ mkdir your-hexo-site</div><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<h2 id="next安装"><a href="#next安装" class="headerlink" title="next安装"></a>next安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2><p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。<br>其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；<br>另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 站点配置文件， 后者称为 主题配置文件。<br>注：yml的格式,”:”符号后有空格，格式不对，hexo构建会失败。</p>
+<h3 id="站点配置文件"><a href="#站点配置文件" class="headerlink" title="站点配置文件"></a>站点配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">启用 NexT 主题</div><div class="line">theme: next</div><div class="line"></div><div class="line">设置语言环境</div><div class="line">language: zh-Hans</div><div class="line"></div><div class="line">设置 作者昵称</div><div class="line">author: myname</div><div class="line"></div><div class="line">部署</div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: master</div><div class="line"></div><div class="line">其他配置详见 http://theme-next.iissnan.com/getting-started.html</div></pre></td></tr></table></figure>
+<h3 id="主题配置文件"><a href="#主题配置文件" class="headerlink" title="主题配置文件"></a>主题配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">选择 Scheme</div><div class="line">scheme: Mist</div><div class="line"></div><div class="line">设置菜单</div><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">    </div><div class="line">设置代码高亮主题</div><div class="line">highlight_theme: night </div><div class="line"></div><div class="line">在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</div><div class="line">auto_excerpt:</div><div class="line">  enable: true</div><div class="line">  length: 150</div><div class="line"></div><div class="line">其他配置详见 http://theme-next.iissnan.com/theme-settings.html</div></pre></td></tr></table></figure>
+<h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site</div><div class="line">$ hexo new page tags</div><div class="line"></div><div class="line">修改页面类型</div><div class="line">编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：</div><div class="line">type: &quot;tags&quot;</div><div class="line"></div><div class="line">禁用评论示例</div><div class="line">comments: false</div></pre></td></tr></table></figure>
+<h3 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site</div><div class="line">$ hexo new page categories</div><div class="line"></div><div class="line">修改页面类型</div><div class="line">编辑刚新建的页面，将页面的类型设置为 categories ，主题将自动为这个页面显示分类。页面内容如下：</div><div class="line">type: &quot;categories&quot;</div><div class="line"></div><div class="line">禁用评论示例</div><div class="line">comments: false</div></pre></td></tr></table></figure>
+<h2 id="github管理"><a href="#github管理" class="headerlink" title="github管理"></a>github管理</h2><h3 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h3><p>登录github后，在首页点击「New Repository」<br>填写项目信息：<br>project name：myname.github.io<br>注：Github Pages的Repository名字是特定的，比如我Github账号是myname，那么我Github Pages Repository名字就是myname.github.io。</p>
+<h3 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h3><p>本地创建git仓库，并且创建hexo分支。<br>hexo分支用于保存hexo的工作空间，更新博客后都需要提交git来保存markdown格式的原文，这样可以在多台机器上共享hexo来发布博客。<br>master分支用于保存静态的博客页面，也就是最终呈现的博客html。<br>在your-hexo-site目录打开git bash:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">初始化本地git仓库</div><div class="line">$ git init</div><div class="line"></div><div class="line">将README.md上传master</div><div class="line">$ git add README.md</div><div class="line">$ git commit -m <span class="string">"注释"</span></div><div class="line"></div><div class="line">创建分支并切换分支</div><div class="line">$ git branch hexo</div><div class="line">$ git checkout hexo </div><div class="line"></div><div class="line">新建.gitignore文件，忽略hexo发布的静态文件，内容如下</div><div class="line">db.json</div><div class="line">public/</div><div class="line">.deploy_git/</div><div class="line">node_modules/</div><div class="line"></div><div class="line">提交hexo分支到github保存</div><div class="line">$ git add .</div><div class="line">$ git commit -m <span class="string">"注释"</span></div><div class="line">$ git remote add origin 远程git地址</div><div class="line">$ git push origin hexo:hexo</div></pre></td></tr></table></figure></p>
+<h2 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">构建预览博客</div><div class="line">$ cd your-hexo-site</div><div class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</div><div class="line"></div><div class="line">发布博客</div><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div><div class="line"></div><div class="line">浏览myname.github.io</div></pre></td></tr></table></figure>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p>tags: #文章标签，可空，多标签请用格式[tag1,tag2,tag3]</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/github-pages/" rel="tag">#github pages</a>
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/hexo-theme-next/" rel="tag">#hexo-theme-next</a>
+          
+            <a href="/tags/markdown/" rel="tag">#markdown</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/18/maven/" rel="prev" title="maven构建">
+                maven构建 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="sunpeak" />
+          <p class="site-author-name" itemprop="name">sunpeak</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#技术说明"><span class="nav-number">1.</span> <span class="nav-text">技术说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装准备"><span class="nav-number">2.</span> <span class="nav-text">安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo安装"><span class="nav-number">3.</span> <span class="nav-text">hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next安装"><span class="nav-number">4.</span> <span class="nav-text">next安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo配置"><span class="nav-number">5.</span> <span class="nav-text">hexo配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#站点配置文件"><span class="nav-number">5.1.</span> <span class="nav-text">站点配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题配置文件"><span class="nav-number">5.2.</span> <span class="nav-text">主题配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加「标签」页面"><span class="nav-number">5.3.</span> <span class="nav-text">添加「标签」页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加「分类」页面"><span class="nav-number">5.4.</span> <span class="nav-text">添加「分类」页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github管理"><span class="nav-number">6.</span> <span class="nav-text">github管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库"><span class="nav-number">6.1.</span> <span class="nav-text">github仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地仓库"><span class="nav-number">6.2.</span> <span class="nav-text">本地仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署博客"><span class="nav-number">7.</span> <span class="nav-text">部署博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他问题"><span class="nav-number">8.</span> <span class="nav-text">其他问题</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sunpeak</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
